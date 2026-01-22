@@ -1,2 +1,2 @@
-# ppdb-smk-bpm-
-apl ppdb uhuy
+# ppdb-smk-bpm
+apl ppdb
