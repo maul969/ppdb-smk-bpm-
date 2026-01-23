@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Kelas - Kelas 10 RPL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .symbol {
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Absensi Kelas 10 RPL</h1>
+    </header>
+
+    <nav>
+        <a href="test absensi.html">Beranda</a>
+        <a href="students.html">Daftar Murid</a>
+    </nav>
+
+    <main>
+        <div class="content">
+            <h2>Absensi Kelas</h2>
+            <form id="attendanceForm">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Nama Siswa</th>
+                            <th>Kehadiran</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Abdul Syahril Pratama</td>
+                            <td class="symbol" id="status1">✗</td>
+                            <td><input type="checkbox" id="attendance1" name="attendance1"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Dimas Surya Putra</td>
+                            <td class="symbol" id="status2">✗</td>
+                            <td><input type="checkbox" id="attendance2" name="attendance2"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Emre Razaq</td>
+                            <td class="symbol" id="status3">✗</td>
+                            <td><input type="checkbox" id="attendance3" name="attendance3"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Farel Afandi</td>
+                            <td class="symbol" id="status4">✗</td>
+                            <td><input type="checkbox" id="attendance4" name="attendance4"></td>
+                        </tr>
+                        <tr>
+                        <td>5</td>
+                        <td>Feliscya Agatha Susanto Lie</td>
+                        <td class="symbol" id="status5">✗</td>
+                        <td><input type="checkbox" id="attendance5" name="attendance5"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Fiqih Alfarizi</td>
+                            <td class="symbol" id="status6">✗</td>
+                            <td><input type="checkbox" id="attendance6" name="attendance6"></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Iskandar Ibrahim</td>
+                            <td class="symbol" id="status7">✗</td>
+                            <td><input type="checkbox" id="attendance7"></td>
+                        </tr>
+
+                        <tr>
+                            <td>8</td>
+                            <td>Marchel Hugo Putra Ramadhan</td>
+                            <td class="symbol" id="status8">✗</td>
+                            <td><input type="checkbox" id="attendance8" name="attendance8"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>9</td>
+                            <td>Maulidan Alif Wicaksono</td>
+                            <td class="symbol" id="status9">✗</td>
+                            <td><input type="checkbox" id="attendance9" name="attendance9"></td>
+                        </tr>
+                        <tr> 
+                            <td>10</td>
+                            <td>Melvin Olivia</td>
+                            <td class="symbol" id="status10">✗</td>
+                            <td><input type="checkbox" id="attendance10" name="attendance10"></td>
+                        </tr>
+                        <tr> 
+                            <td>11</td>
+                            <td>Mochammad Irfan Ardiansyah</td>
+                            <td class="symbol" id="status101">✗</td>
+                            <td><input type="checkbox" id="attendance11" name="attendance11"></td>
+                        </tr>
+                        <tr> 
+                            <td>12</td>
+                            <td>Muhammad Fahry Tri Gunawan</td>
+                            <td class="symbol" id="status12">✗</td>
+                            <td><input type="checkbox" id="attendance12" name="attendance12"></td>
+                        </tr>    
+                        <tr> 
+                            <td>13</td>
+                            <td>Muhammad Farel Andriani</td>
+                            <td class="symbol" id="status13">✗</td>
+                            <td><input type="checkbox" id="attendance13" name="attendance13"></td>
+                        </tr>
+                        <tr> 
+                            <td>14</td>
+                            <td>Muhammad Ihwan Utomo</td>
+                            <td class="symbol" id="status14">✗</td>
+                            <td><input type="checkbox" id="attendance14" name="attendance14"></td>
+                        </tr>
+                        <tr> 
+                            <td>15</td>
+                            <td>Novita Damayanti</td>
+                            <td class="symbol" id="status15">✗</td>
+                            <td><input type="checkbox" id="attendance15" name="attendance15"></td>
+                        </tr>   <tr> 
+                            <td>16</td>
+                            <td>Nurlita</td>
+                            <td class="symbol" id="status16">✗</td>
+                            <td><input type="checkbox" id="attendance16" name="attendance16"></td>
+                        </tr>
+                        <tr> 
+                            <td>17</td>
+                            <td>Oktapia Nurpadilah</td>
+                            <td class="symbol" id="status17">✗</td>
+                            <td><input type="checkbox" id="attendance17" name="attendance17"></td>
+                        </tr>
+                        <tr> 
+                            <td>18</td>
+                            <td>Putra Kasela</td>
+                            <td class="symbol" id="status18">✗</td>
+                            <td><input type="checkbox" id="attendance18" name="attendance18"></td>
+                        </tr>
+                        <tr> 
+                            <td>19</td>
+                            <td>Ramadhan Agil siraj</td>
+                            <td class="symbol" id="status19">✗</td>
+                            <td><input type="checkbox" id="attendance19" name="attendance19"></td>
+                        </tr>
+                        <tr> 
+                            <td></20>
+                            <td>Ratu Haerunisa</td>
+                            <td class="symbol" id="status20">✗</td>
+                            <td><input type="checkbox" id="attendance20" name="attendance20"></td>
+                        </tr>
+                        <tr> 
+                            <td>21</td>
+                            <td>Reyvan Darmawan
+                            <td class="symbol" id="status21">✗</td>
+                            <td><input type="checkbox" id="attendance21" name="attendance21"></td>
+                        </tr>
+                        <tr> 
+                            <td>22</td>
+                            <td>Lina Rusliana</td>
+                            <td class="symbol" id="status22">✗</td>
+                            <td><input type="checkbox" id="attendance22" name="attendance22"></td>
+                        </tr>
+                        <tr> 
+                            <td>23</td>
+                            <td>Robiayatun Nisa</td>
+                            <td class="symbol" id="status23">✗</td>
+                            <td><input type="checkbox" id="attendance23" name="attendance23"></td>
+                        </tr>
+                        <tr> 
+                            <td>24</td>
+                            <td>Robiayatun Nisa</td>
+                            <td class="symbol" id="status24">✗</td>
+                            <td><input type="checkbox" id="attendance24" name="attendance24"></td>
+                        </tr>
+                        <tr> 
+                            <td>25</td>
+                            <td>Saka Novagio</td>
+                            <td class="symbol" id="status25">✗</td>
+                            <td><input type="checkbox" id="attendance25" name="attendance25"></td>
+                        </tr>
+                        <tr> 
+                            <td>26</td>
+                            <td>Sugiarto Raharjo</td>
+                            <td class="symbol" id="status26">✗</td>
+                            <td><input type="checkbox" id="attendance26" name="attendance26"></td>
+                        </tr>
+                        <tr> 
+                            <td>27</td>
+                            <td>Umar Hafidz</td>
+                            <td class="symbol" id="status27">✗</td>
+                            <td><input type="checkbox" id="attendance27" name="attendance27"></td>
+                        </tr>
+                    </body>
+                </table>
+                <button type="button" onclick="submitAttendance()">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Fungsi untuk menyimpan data absensi ke LocalStorage
+        function saveAttendanceToLocalStorage(attendanceData) {
+            localStorage.setItem("attendance", JSON.stringify(attendanceData));
+        }
+
+        // Fungsi untuk mengambil data absensi dari LocalStorage
+        function getAttendanceFromLocalStorage() {
+            const savedAttendance = localStorage.getItem("attendance");
+            return savedAttendance ? JSON.parse(savedAttendance) : null;
+        }
+
+        // Fungsi untuk memproses absensi
+        function submitAttendance() {
+            const attendanceData = {
+                "Abdul Syahril Pratama": document.getElementById('attendance1').checked,
+                "Dimas Surya Putra": document.getElementById('attendance2').checked,
+                "Emre Razaq": document.getElementById('attendance3').checked
+            };
+
+            // Simpan absensi ke LocalStorage
+            saveAttendanceToLocalStorage(attendanceData);
+
+            // Tampilkan pesan sukses
+            alert('Absensi berhasil disimpan!');
+            updateSymbols(attendanceData);
+        }
+
+        // Fungsi untuk memuat data absensi yang tersimpan saat halaman dimuat
+        function loadAttendance() {
+    const savedAttendance = getAttendanceFromLocalStorage();
+    if (savedAttendance) {
+        // Update checkboxes for each attendee
+        document.getElementById('attendance1').checked = savedAttendance["Abdul Syahril Pratama"];
+        document.getElementById('attendance2').checked = savedAttendance["Dimas Surya Putra"];
+        document.getElementById('attendance3').checked = savedAttendance["Emre Razaq"];
+        document.getElementById('attendance4').checked = savedAttendance["Farel Afandi"];
+        document.getElementById('attendance5').checked = savedAttendance["Felicya Agatha Susanto lie"];
+        document.getElementById('attendance6').checked = savedAttendance["fiqih Alfarizi"];
+        document.getElementById('attendance7').checked = savedAttendance["iskandar ibrahim"];
+        document.getElementById('attendance8').checked = savedAttendance["Marchel Hugo Putra Ramadhan"];
+        document.getElementById('attendance9').checked = savedAttendance["Maulidana Alif Wicaksono"];
+        document.getElementById('attendance10').checked = savedAttendance["Melvin Olivia"];
+        document.getElementById('attendance11').checked = savedAttendance["Mochammad Irfan Ardiansyah"];
+        document.getElementById('attendance12').checked = savedAttendance["Muhammad Fahry Tri Gunawan"];
+        document.getElementById('attendance13').checked = savedAttendance["Muhammad Farel Andriani"];
+        document.getElementById('attendance14').checked = savedAttendance["Muhammad Ihwan Utomo"];
+        document.getElementById('attendance15').checked = savedAttendance["Novita Damayanti"];
+        document.getElementById('attendance16').checked = savedAttendance["Nurlita"];
+        document.getElementById('attendance17').checked = savedAttendance["Oktapia Nurpadilah"];
+        document.getElementById('attendance18').checked = savedAttendance["Putra Kasela"];
+        document.getElementById('attendance19').checked  = savedAttendance["Ramadhan Agil siraj"];
+        document.getElementById('attendance20').checked = savedAttendance["Ratu Haerunisa"];
+        document.getElementById('attendance21').checked = savedAttendance["Reyvan Darmawan"];
+        document.getElementById('attendance22').checked = savedAttendance["Rina Rusliana"];
+        document.getElementById('attendance23').checked = savedAttendance["Robiayatun Nisa"];
+        document.getElementById('attendance24').checked = savedAttendance["Saka Novagio"];
+        document.getElementById('attendance25').checked = savedAttendance["Siti Nur Kholisa"];
+        document.getElementById('attendance26').checked = savedAttendance["Sugiarto Raharjo"];
+        document.getElementById('attendance27').checked = savedAttendance["Umar Hafidz Muhammad"];
+        
+        // Update tampilan simbol (✓ atau ✗)
+        updateSymbols(savedAttendance);
+    }
+}
+
+
+        // Fungsi untuk memperbarui simbol kehadiran (✓ atau ✗)
+        function updateSymbols(attendanceData) {
+            document.getElementById('status1').textContent = attendanceData["Abdul Syahril Pratama"] ? '✓' : '✗';
+            document.getElementById('status2').textContent = attendanceData["Dimas Surya Putra"] ? '✓' : '✗';
+            document.getElementById('status3').textContent = attendanceData["Emre Razaq"] ? '✓' : '✗';
+            document.getElementById('status4').textContent = attendanceData["Farel Afandi"] ? '✓' : '✗';
+            document.getElementById('status5').textContent = attendanceData["felicya agatha susanto lie"] ? '✓' : '✗';
+            document.getElementById('status6').textContent = attendanceData["fiqih alfarizi"] ? '✓' : '✗';
+            document.getElementById('status7').textContent = attendanceData["iskandar ibrahim"] ? '✓' : '✗';
+            document.getElementById('status8').textContent = attendanceData["Marchel Hugo Putra Ramadhan"] ? '✓' : '✗';
+            document.getElementById('status9').textContent = attendanceData["Maulidan Alif Wicaksono"] ? '✓' : '✗';
+            document.getElementById('status10').textContent = attendanceData["Melvin Olivia"] ? '✓' : '✗';
+            document.getElementById('status11').textContent = attendanceData["Mochammad Irfan Ardiansyah"] ? '✓' : '✗';
+            document.getElementById('status12').textContent = attendanceData["Muhammad Fahry Tri Gunawan"] ? '✓' : '✗';
+            document.getElementById('status13').textContent = attendanceData["Muhammad Farel Andriani"] ? '✓' : '✗';
+            document.getElementById('status14').textContent = attendanceData["Muhammad Ihwan Utomo"] ? '✓' : '✗';
+            document.getElementById('status15').textContent = attendanceData["Novita Damayanti"] ? '✓' : '✗';
+            document.getElementById('status16').textContent = attendanceData[" Nurlita"] ? '✓' : '✗';
+            document.getElementById('status17').textContent = attendanceData["Oktapia Nurpadilah"] ? '✓' : '✗';
+            document.getElementById('status18').textContent = attendanceData["Putra Kasela"] ? '✓' : '✗';
+            document.getElementById('status19').textContent = attendanceData["Ramadhan Agil Siraj"] ? '✓' : '✗';
+            document.getElementById('status20').textContent = attendanceData["Ratu Haerunisa"] ? '✓' : '✗';
+            document.getElementById('status21').textContent = attendanceData["Reyvan Darmawan"] ? '✓' : '✗';
+            document.getElementById('status22').textContent = attendanceData["Rina Rusliana"] ? '✓' : '✗';
+            document.getElementById('status23').textContent = attendanceData["Robiayatun Nisa"] ? '✓' : '✗';
+            document.getElementById('status24').textContent = attendanceData["Saka Novagio"] ? '✓' : '✗';
+            document.getElementById('status25').textContent = attendanceData["Siti Nur Kholisa"] ? '✓' : '✗';
+            document.getElementById('status26').textContent = attendanceData["Sugiarto Raharjo"] ? '✓' : '✗';
+            document.getElementById('status27').textContent = attendanceData["Umar Hafidz Muhyidin"] ? '✓' : '✗';
+        }  
+
+        // Panggil fungsi loadAttendance saat halaman dimuat
+        window.onload = loadAttendance;
+    </script>
+
+</body>
+</html>

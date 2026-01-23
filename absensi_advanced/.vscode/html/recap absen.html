@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekap Absensi - Kelas 10 RPL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 80%;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Rekap Absensi Kelas 10 RPL</h1>
+    </header>
+
+    <nav>
+        <a href="test_absensi.html">Beranda</a>
+        <a href="students.html">Absensi Siswa</a>
+        <a href="rekap_absensi_guru.html">Rekap Absensi</a>
+    </nav>
+
+    <main>
+        <div class="content">
+            <h2>Rekap Absensi</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Nama Siswa</th>
+                        <th>Kehadiran</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceTableBody">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        // Inisialisasi data absensi untuk 27 siswa
+        const attendanceData = {
+            "Abdul syahril pratama": true,
+            "dimas surya putra": false,
+            "emre razaq": true,
+            "farel apandi": true,
+            "felicya agatha susanto lie": false,
+            "Fiqih alfarizi": true,
+            "iskandar ibrahim": true,
+            "marchel hugo putra ramadhan": false,
+            "maulidan alif wicaksono": true,
+            "melvin olivia": true,
+            "Kartika Dewi": true,
+            "mochammad irfan ardiansyah": false,
+            "Muhammad fahri tri gunawan": true,
+            "muhammad farel andriani": true,
+            "muhammad ihwan utomo": false,
+            "novita damayanti": true,
+            "nurlita": true,
+            "oktapia nurpadilah": false,
+            "putra kasela": true,
+            "ramadhan agil siraj": true,
+            "reyvan darmawan": false,
+            "rina rusliana": true,
+            "robiyatun nisa": true,
+            "saka novagio": false,
+            "siti nur kholisa": true,
+            "sugiarto raharjo": true,
+            "umar hafidz": true
+        };
+
+        // Simpan data ke localStorage jika belum ada
+        if (!localStorage.getItem("attendance")) {
+            localStorage.setItem("attendance", JSON.stringify(attendanceData));
+        }
+
+        function getAttendanceFromLocalStorage() {
+            const savedAttendance = localStorage.getItem("attendance");
+            return savedAttendance ? JSON.parse(savedAttendance) : {};
+        }
+
+        function loadAttendance() {
+            const attendanceData = getAttendanceFromLocalStorage();
+            const tableBody = document.getElementById('attendanceTableBody');
+            tableBody.innerHTML = '';
+
+            let no = 1;
+            for (const [name, present] of Object.entries(attendanceData)) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${no++}</td>
+                    <td>${name}</td>
+                    <td>
+                        <input type="checkbox" ${present ? 'checked' : ''} 
+                               onchange="updateAttendance('${name}', this.checked)">
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            }
+        }
+
+        function updateAttendance(name, isChecked) {
+            const attendanceData = getAttendanceFromLocalStorage();
+            attendanceData[name] = isChecked;
+            localStorage.setItem("attendance", JSON.stringify(attendanceData));
+        }
+
+        window.onload = loadAttendance;
+    </script>
+
+</body>
+</html>

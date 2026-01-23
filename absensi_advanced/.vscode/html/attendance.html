@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Kelas - Kelas 10 RPL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: inline-block;
+            width: 80%;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Absensi Kelas 10 RPL</h1>
+    </header>
+
+    <nav>
+        <a href="test absensi.html">Beranda</a>
+        <a href="students.html">Daftar Murid</a>
+        <a href="local storage.html">Data Absen</a>
+    </nav>
+
+    <main>
+        <div class="content">
+            <h2>Absensi Kelas</h2>
+            <form id="attendanceForm">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Nama Siswa</th>
+                            <th>Kehadiran</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Abdul Syahril Pratama</td>
+                            <td><input type="checkbox" name="attendance1"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Dimas Surya Putra</td>
+                            <td><input type="checkbox" name="attendance2"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Emre Razaq</td>
+                            <td><input type="checkbox" name="attendance3"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Farel Afandi</td>
+                            <td><input type="checkbox" name="attendance4"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Feliscya Agatha Susanto Lie</td>
+                            <td><input type="checkbox" name="attendance5"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Fiqih Alfarizi</td>
+                            <td><input type="checkbox" name="attendance6"></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Iskandar Ibrahim</td>
+                            <td><input type="checkbox" name="attendance7"></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Marchel Hugo Putra Ramadhan</td>
+                            <td><input type="checkbox" name="attendance8"></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Maulidan Alif Wicaksono</td>
+                            <td><input type="checkbox" name="attendance9"></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Melvin Olivia</td>
+                            <td><input type="checkbox" name="attendance10"></td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Mochammad Irfan Ardiansyah</td>
+                            <td><input type="checkbox" name="attendance11"></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Muhammad Fahri Tri Gunawan</td>
+                            <td><input type="checkbox" name="attendance12"></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Muhammad Farel Andriani</td>
+                            <td><input type="checkbox" name="attendance13"></td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Muhammad Ihwan Utomo</td>
+                            <td><input type="checkbox" name="attendance14"></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Novita Damayanti</td>
+                            <td><input type="checkbox" name="attendance15"></td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Nurlita</td>
+                            <td><input type="checkbox" name="attendance16"></td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Oktapia Nurpadilah</td>
+                            <td><input type="checkbox" name="attendance17"></td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Putra Kasela</td>
+                            <td><input type="checkbox" name="attendance18"></td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>Ramadhan Agil Siraj</td>
+                            <td><input type="checkbox" name="attendance19"></td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Reyvan Darmawan</td>
+                            <td><input type="checkbox" name="attendance20"></td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>Rinda Rusliana</td>
+                            <td><input type="checkbox" name="attendance20"></td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>Robiyatun Nisa</td>
+                            <td><input type="checkbox" name="attendance20"></td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>Saka Novagio</td>
+                            <td><input type="checkbox" name="attendance20"></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Siti Nur Kholisa</td>
+                            <td><input type="checkbox" name="attendance20"></td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>Sugiarto Raharjo</td>
+                            <td><input type="checkbox" name="attendance20"></td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>Umar Hafidz</td>
+                            <td><input type="checkbox" name="attendance20"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" onclick="submitAttendance()">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function submitAttendance() {
+            alert('Absensi telah disubmit!');
+        }
+    </script>
+
+</body>
+</html>
