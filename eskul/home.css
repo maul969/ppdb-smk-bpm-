@@ -1,0 +1,278 @@
+/* === RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* === BODY === */
+body {
+    background: #f9d78a;
+    color: #222;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* === NAVBAR === */
+nav {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #b93b06, #fbbf77);
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1) rotate(8deg);
+}
+
+.logo h2 {
+    font-size: 26px;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* === BODY UTAMA === */
+.body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 20px;
+    gap: 60px;
+}
+
+/* === KOLOM === */
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+    min-width: 300px;
+}
+
+/* === KOTAK GAMBAR === */
+.imgBox {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transform: scale(0.95);
+    opacity: 0;
+    transition: all 0.7s ease;
+    cursor: pointer;
+    will-change: transform, opacity;
+}
+
+.imgBox.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.imgBox:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.imgBox:hover img {
+    transform: scale(1.1);
+}
+
+/* === TEKS GAMBAR === */
+.imgBox p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 20px 0;
+    letter-spacing: 1px;
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.6);
+    transition: color 0.3s ease;
+}
+
+/* === FOOTER === */
+footer {
+    background-color: #7b1f04;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+    .body {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo h2 {
+        font-size: 22px;
+    }
+}
+
+/* === RIPPLE EFFECT === */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    width: 80px;
+    height: 80px;
+    transform: scale(0);
+    animation: rippleEffect 0.6s linear;
+    pointer-events: none;
+}
+@keyframes rippleEffect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* === SECTIONS TANPA GAP === */
+section {
+    padding: 5rem 3rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background 0.8s ease;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* === HILANGKAN GAP ANTAR SECTION === */
+section + section {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* === GARIS ANIMASI DI TENGAH (TERSAMBUNG) === */
+.moving-line {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, #ffb703, #ff7b00, #ffb703);
+    background-size: 100% 200%;
+    animation: moveLine 4s linear infinite;
+    z-index: 9999;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 8px #ff8800);
+}
+
+@keyframes moveLine {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 200%; }
+}
+
+/* === SECTION KHUSUS === */
+#section-pmr {
+    background: linear-gradient(120deg, white 60%, red 60%);
+}
+#section-futsal {
+    background: linear-gradient(120deg, red 60%, black 60%);
+}
+#section-tari {
+    background: linear-gradient(120deg, black 60%, pink 60%);
+}
+
+/* === NAV TIAP SECTION === */
+#nav-pmr, #nav-futsal, #nav-tari {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+#nav-pmr h1, #nav-futsal h1, #nav-tari h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* === KONTEN SECTION === */
+#container-pmr, #container-futsal, #container-tari {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+#text-pmr, #text-futsal, #text-tari {
+    max-width: 550px;
+}
+
+#text-pmr h1, #text-futsal h1, #text-tari h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+#text-pmr h1 { color: #1c1c1c; }
+#text-futsal h1, #text-tari h1 { color: #fff; }
+
+#text-pmr p { color: #3b3b3b; }
+#text-futsal p, #text-tari p { color: rgba(255,255,255,0.9); }
+
+/* === GAMBAR KECIL === */
+#small-images-pmr, #small-images-futsal, #small-images-tari {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#small-images-pmr img, #small-images-futsal img, #small-images-tari img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+#small-images-pmr img:hover,
+#small-images-futsal img:hover,
+#small-images-tari img:hover {
+    transform: scale(1.1);
+}
+
+#main-image-pmr, #main-image-futsal, #main-image-tari {
+    width: 420px;
+    border-radius: 25px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+}
+
+/* === PEMBATAS (OPSIONAL, TIDAK DIPAKAI LAGI) === */
+.section-divider {
+    display: none; /* disembunyikan agar tidak buat gap */
+}
